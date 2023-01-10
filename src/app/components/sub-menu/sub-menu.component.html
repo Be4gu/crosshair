@@ -1,0 +1,31 @@
+<div
+  class="w-[333px] mb-7 flex flex-col items-center justify-start font-antonio xs:w-[444px] sm:w-[680px] sm:flex-row sm:gap-14 md:w-[852px] md:gap-10 lg:w-[1072px] xl:w-[1292px] 2xl:w-[1512px]"
+>
+  <input
+    [(ngModel)]="searcher"
+    (keyup)="setQuerySearch()"
+    placeholder="Search"
+    type="text"
+    class="order-2 h-[34px] w-72 rounded-md border border-gray-300 bg-inherit pl-2 text-gray-300 placeholder:italic focus:shadow-polvillo focus:outline-none focus:ring-transparent sm:order-none md:w-56"
+  />
+  <div
+    class="cross-filter order-1 flex pb-3 font-semibold sm:order-none sm:pb-0"
+  >
+    <ng-container *ngFor="let name of types">
+      <button
+        *ngIf="name !== active; else buttonActive"
+        (click)="activeButton(name)"
+        class="box-border border border-gray-300 py-1 px-2 text-gray-300 uppercase"
+      >
+        {{ name }}
+      </button>
+      <ng-template #buttonActive>
+        <button
+          class="box-border border border-gray-300 py-1 px-2 bg-gray-200 shadow-polvillo text-[#222] uppercase"
+        >
+          {{ name }}
+        </button>
+      </ng-template>
+    </ng-container>
+  </div>
+</div>

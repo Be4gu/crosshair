@@ -1,0 +1,13 @@
+<div  class="code-crosshire absolute left-0 bottom-0 h-12 w-full cursor-pointer border-t border-white/50">
+  <span class="hidden"></span>
+
+  <div (mouseenter)="mouseIn()" (click)="click()" (mouseleave)="mouseOut()" class="bg-[#ef2d5e] absolute inset-0 flex h-full w-full items-center justify-center ">
+    <svg [ngClass]="hover" class="h-8 w-8 stroke-white delay-100 duration-200 ease-in-out " fill="none"
+      stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2">
+      </path>
+    </svg>
+  </div>
+  <a class="absolute bottom-0 left-0 h-5 w-20 translate-y-5 rounded-tr-md bg-black/80 text-center text-sm font-bold text-white duration-200">Copied</a>
+</div>

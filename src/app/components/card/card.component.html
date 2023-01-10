@@ -1,0 +1,15 @@
+<div
+  *ngFor="let mira of miras"
+  class="card-crosshair relative h-44 w-52 overflow-hidden rounded-lg border border-white/90 bg-[#141414] shadow-polvillo md:w-48"
+>
+  <div
+    class="absolute top-0 left-0 flex h-32 w-full justify-center bg-white/50"
+  >
+    <span class="absolute bottom-1 left-1 text-xl font-semibold text-white">{{
+      mira.name
+    }}</span>
+    <img src="{{ mira.pathImg }}" alt="" srcset="" />
+    <img alt="" srcset="" />
+  </div>
+  <app-button-clip valorDelPadre="{{ mira.codeCrosshair }}"></app-button-clip>
+</div>
