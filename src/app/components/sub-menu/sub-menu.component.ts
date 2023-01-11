@@ -1,4 +1,4 @@
-import {  Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -13,8 +13,8 @@ export class SubMenuComponent implements OnInit {
 
   constructor(private route: Router, private activeRout: ActivatedRoute) {
   }
-  
-  
+
+
   activeButton(name: string) {
     this.active = name.toLowerCase();
     this.setQueryParams();
@@ -29,16 +29,14 @@ export class SubMenuComponent implements OnInit {
   setQueryParams() {
     this.route.navigate(['/miras'], {
       queryParams: { cat: this.active },
-    });
+    })
   }
 
   ngOnInit() {
-    
     this.activeRout.queryParams.subscribe((params) => {
       this.active = params['cat'];
-      console.log("value active: "+this.active);
-      
-    });
+      this.searcher = params['search']
+    })
   }
 
 }

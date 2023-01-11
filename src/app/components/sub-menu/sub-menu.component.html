@@ -13,15 +13,16 @@
   >
     <ng-container *ngFor="let name of types">
       <button
-        *ngIf="name !== active; else buttonActive"
+        *ngIf="name === active || (active===undefined && name === 'all') ; else buttonActive"
         (click)="activeButton(name)"
-        class="box-border border border-gray-300 py-1 px-2 text-gray-300 uppercase"
-      >
+        class="box-border border border-gray-300 py-1 px-2 bg-gray-200 shadow-polvillo text-[#222] uppercase"
+        >
         {{ name }}
       </button>
       <ng-template #buttonActive>
         <button
-          class="box-border border border-gray-300 py-1 px-2 bg-gray-200 shadow-polvillo text-[#222] uppercase"
+        (click)="activeButton(name)"
+        class="box-border border border-gray-300 py-1 px-2 text-gray-300 uppercase"
         >
           {{ name }}
         </button>
