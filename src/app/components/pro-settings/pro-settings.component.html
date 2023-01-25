@@ -1,0 +1,21 @@
+<div class="cross-filter order-1 flex pb-3 font-semibold sm:order-none sm:pb-0">
+
+    <ng-container *ngFor="let name of players">
+        <button *ngIf="name === active || (active===undefined && name === 'all') ; else buttonActive"
+            (click)="activeButton(name)"
+            class="box-border border border-gray-300 py-1 px-2 bg-gray-200 shadow-polvillo text-[#222] uppercase">
+            {{ name }}
+        </button>
+        <ng-template #buttonActive>
+            <button (click)="activeButton(name)"
+                class="box-border border border-gray-300 py-1 px-2 text-gray-300 uppercase">
+                {{ name }}
+            </button>
+        </ng-template>
+    </ng-container>
+</div>
+
+<div>
+    {{infoPlayer[0].pro}}
+    <!-- //Viene un bucle que recorre el json en busca de pro que sea igual a active (variable que recoge la info de la url) -->
+</div>
