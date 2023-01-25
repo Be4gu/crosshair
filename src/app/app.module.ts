@@ -12,6 +12,8 @@ import { SubMenuComponent } from './components/sub-menu/sub-menu.component';
 import { MirasComponent } from './components/miras/miras.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ProSettingsComponent } from './components/pro-settings/pro-settings.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     ButtonTypeComponent,
     SubMenuComponent,
     MirasComponent,
+    ProSettingsComponent,
+    MenuComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
