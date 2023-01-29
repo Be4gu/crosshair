@@ -1,6 +1,6 @@
 <ng-container *ngFor="let mira of miras; index as i">
   <div
-    *ngIf="(i + 1) % 8 === 0; else cardCross"
+    *ngIf="(i + 1) % 7 === 0; else cardCross"
     class="card-crosshair relative h-44 w-52 overflow-hidden rounded-lg border border-white/90 bg-[#141414] shadow-polvillo md:w-48"
   >
     <script
