@@ -12,9 +12,12 @@ export class CrosshairsService {
   constructor(private http: HttpClient) {}
 
   getCat(cat: string): Observable<Miras[]> {
-    return this.http.get<Miras[]>(this.url + 'cat/' + cat);
+    return this.http.get<Miras[]>(this.url + 'miras/cat/' + cat);
+  }
+  getPlayer(name: string): Observable<any> {
+    return this.http.get<any[]>(this.url + 'players/' + name);
   }
   searcher(name: string): Observable<Miras[]> {
-    return this.http.get<Miras[]>(this.url + 'searcher/' + name);
+    return this.http.get<Miras[]>(this.url + 'miras/searcher/' + name);
   }
 }

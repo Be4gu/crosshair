@@ -10,10 +10,12 @@ import { CrosshairsService } from 'src/app/services/crosshairs.service';
 })
 export class CardComponent {
   public miras: Array<Miras> = [];
+  public length: number;
   constructor(
     private activeCat: ActivatedRoute,
     private svc: CrosshairsService
   ) {
+    this.length = 0;
     this.crossFilter();
   }
 
@@ -42,4 +44,8 @@ export class CardComponent {
       }
     });
   }
+
+  // getLength() {
+  //   return this.length++;
+  // }
 }

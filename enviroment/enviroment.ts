@@ -1,3 +1,3 @@
 export const environment = {
-  apiUrl: 'https://back.crosshair.workers.dev/miras/',
+  apiUrl: 'https://back.crosshair.workers.dev/',
 };
