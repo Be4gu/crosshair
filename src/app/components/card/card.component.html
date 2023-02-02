@@ -1,43 +1,15 @@
-<ng-container *ngFor="let mira of miras; index as i">
+<div
+  *ngFor="let mira of miras"
+  class="card-crosshair relative h-44 w-52 overflow-hidden rounded-lg border border-white/90 bg-[#141414] shadow-polvillo md:w-48"
+>
   <div
-    *ngIf="(i + 1) % 7 === 0; else cardCross"
-    class="card-crosshair relative h-44 w-52 overflow-hidden rounded-lg border border-white/90 bg-[#141414] shadow-polvillo md:w-48"
+    class="absolute top-0 left-0 flex h-32 w-full justify-center bg-white/50"
   >
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8271717628756547"
-      crossorigin="anonymous"
-    ></script>
-    <!-- AnunciosMiras -->
-    <ins
-      class="adsbygoogle w-full h-full"
-      style="display: block"
-      data-ad-client="ca-pub-8271717628756547"
-      data-ad-slot="5668220499"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    ></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+    <span class="absolute bottom-1 left-1 text-xl font-semibold text-white">{{
+      mira.name
+    }}</span>
+    <img src="{{ mira.pathImg }}" alt="" srcset="" />
+    <img alt="" srcset="" />
   </div>
-  <ng-template #cardCross>
-    <div
-      class="card-crosshair relative h-44 w-52 overflow-hidden rounded-lg border border-white/90 bg-[#141414] shadow-polvillo md:w-48"
-    >
-      <div
-        class="absolute top-0 left-0 flex h-32 w-full justify-center bg-white/50"
-      >
-        <span
-          class="absolute bottom-1 left-1 text-xl font-semibold text-white"
-          >{{ mira.name }}</span
-        >
-        <img src="{{ mira.pathImg }}" alt="" srcset="" />
-        <img alt="" srcset="" />
-      </div>
-      <app-button-clip
-        valorDelPadre="{{ mira.codeCrosshair }}"
-      ></app-button-clip>
-    </div>
-  </ng-template>
-</ng-container>
+  <app-button-clip valorDelPadre="{{ mira.codeCrosshair }}"></app-button-clip>
+</div>
