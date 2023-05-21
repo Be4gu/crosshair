@@ -4,13 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build-dev": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dev:ssr": "ng run crosshair:serve-ssr",
     "serve:ssr": "node dist/crosshair/server/main.js",
     "build:ssr": "ng build && ng run crosshair:server",
-    "prerender": "ng run crosshair:prerender"
+    "prerender": "ng run crosshair:prerender",
+    "vercel-build": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
