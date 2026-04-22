@@ -72,6 +72,8 @@ export default function RootLayout({
         </Script>
         {/* Google AdSense */}
         <Script src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8271717628756547' crossOrigin='anonymous' strategy='afterInteractive' />
+        {/* Umami Analytics */}
+        <Script defer src='https://cloud.umami.is/script.js' data-website-id='8a280a9b-21b6-49d7-9ecf-5854ef37e799' strategy='afterInteractive' />
       </head>
       <body className='min-h-full flex flex-col'>
         <Menu />
