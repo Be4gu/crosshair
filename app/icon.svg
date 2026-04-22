@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="16" fill="#18181b"/>
+  <g transform="translate(64,64)">
+    <!-- Outer circle -->
+    <circle cx="0" cy="0" r="48" fill="none" stroke="#ef2d5e" stroke-width="6"/>
+    <!-- Crosshair lines -->
+    <line x1="-48" y1="0" x2="-16" y2="0" stroke="#ef2d5e" stroke-width="6" stroke-linecap="round"/>
+    <line x1="16" y1="0" x2="48" y2="0" stroke="#ef2d5e" stroke-width="6" stroke-linecap="round"/>
+    <line x1="0" y1="-48" x2="0" y2="-16" stroke="#ef2d5e" stroke-width="6" stroke-linecap="round"/>
+    <line x1="0" y1="16" x2="0" y2="48" stroke="#ef2d5e" stroke-width="6" stroke-linecap="round"/>
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="5" fill="#ef2d5e"/>
+  </g>
+</svg>
