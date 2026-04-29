@@ -27,7 +27,7 @@ const bitter = Bitter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://crosshair.gg"),
+  metadataBase: new URL("https://crosshair.best"),
   title: {
     default: "Crosshair - Miras de Valorant, Códigos y Configuraciones Pro",
     template: "%s | Crosshair",
